@@ -1,0 +1,449 @@
+@import url('https://fonts.googleapis.com/css2?family=Marcellus&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+:root {
+    --azulclaro: #48D6ED;
+    --azuloscuro: rgb(51, 122, 183);
+    --azulnegro: #303342;
+    --negro: #333333;
+    --negro2: #000;
+    --gris: #B2B3B3;
+    --fondo: #FFFEFC;
+    --verdeazul: #157A8A;
+    --Magenta: #9C2759;
+    --blanco: #fff;
+    --degradado: linear-gradient(49.54deg, #337AB7 2.89%, #0B3860 80.34%);
+}
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: 'Roboto', sans-serif;
+    font-size: 14px;
+}
+h1, h2, h3, h4, h5 {
+    font-family: 'Marcellus', serif;
+}
+#container-grid {
+    display: grid;
+    grid-template:
+        "header" auto
+        "main" auto
+        "footer" auto;
+}
+header {
+    grid-area: header;
+    display: grid;
+    grid-template-areas:
+        "logo"
+        "nav";
+}
+.logo {
+    grid-area: logo;
+    display: grid;
+    grid-template-areas:
+        "logo-img menu-bars" auto/auto;
+    background-color: var(--negro2);
+    padding: 1rem;
+}
+.logo img {
+    grid-area: logo-img;
+    width: 30%;
+}
+.logo i {
+    grid-area: menu-bars;
+    color: var(--blanco);
+    font-size: 2rem;
+    justify-self: right;
+    align-self: center;
+}
+nav {
+    grid-area: nav;
+    display: grid;
+    background-color: rgba(1, 10, 52, 0.838);
+    text-align: center;
+    padding: 0rem 0rem;
+    font-family: 'Marcellus', serif;
+    position: absolute;
+    z-index: 100;
+    width: 100%;
+    margin-top: 4rem;
+}
+nav hr {
+    width: 90%;
+    color: var(--blanco);
+    border-width: 0.01rem;
+    border-style: solid;
+    justify-self: center;
+    margin: 1rem 0;
+}
+nav a {
+    font-size: 1rem;
+    color: var(--blanco);
+    text-decoration: none;
+    padding: 1rem;
+}
+nav button {
+    font-family: 'Marcellus', serif;
+    font-size: 1rem;
+    background-color: transparent;
+    color: var(--blanco);
+    padding: 0.5rem;
+    margin: 1rem;
+}
+a:hover {
+    background-color: #0B3860;
+}
+main {
+    grid-area: main;
+    display: grid;
+    grid-template-areas:
+        "banner"
+        "description"
+        "feature"
+        "ubicacion"
+        "opiniones";
+}
+#banner {
+    grid-area: banner;
+    display: flex;
+    flex-direction: column-reverse;
+    background-image: url(../img/slide1.jpg);
+    height: 200px;
+    background-size: cover;
+    background-position: 55% 45%;
+    position: relative;
+    z-index: 0;
+}
+.text_banner {
+    background-color: rgb(0, 0, 0, 0.3);
+    color: var(--blanco);
+    font-family: 'Roboto', sans-serif;
+    font-size: 0.7rem;
+    padding: 0.5rem 1rem;
+}
+.text-description {
+    text-align: justify;
+    padding: 1rem;
+}
+.logo-description {
+    display: none;
+}
+#feature {
+    background-image: url(../img/bg-features.png);
+    background-size: cover;
+    padding-top: 1rem;
+    padding-bottom: 2rem;
+}
+#feature h2 {
+    text-align: center;
+    color: var(--blanco);
+    font-size: 1.3rem;
+    font-weight: 100;
+    background-color: rgb(0, 0, 0, 0.3);
+    text-shadow: 3px 3px 3px var(--negro2);
+    padding: 0.5rem 0;
+}
+.feature_row {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    align-items: center;
+    margin-top: 1rem;
+}
+.feature-box {
+    margin-top: 1rem;
+    text-align: center;
+    padding: 1rem 1rem;
+    border-radius: 0.2rem;
+    color: var(--blanco);
+    font-size: 1.5rem;
+    max-width: 40%;
+}
+.feature-box h3 {
+    font-family: 'Roboto', sans-serif;
+    font-size: 1rem;
+    margin-top: 1.5rem;
+}
+.box1 {
+    background-color: #00325eae;
+}
+.box2 {
+    background-color: rgb(0, 0, 0, 0.3);
+}
+#ubicacion {
+    font-family: 'Roboto', sans-serif;
+    font-size: 1rem;
+    text-align: center;
+    margin-top: 30px;
+    padding: 5px;
+}
+#ubicacion iframe {
+    width: 100%;
+    height: 270px;
+    margin: 15px 0;
+}
+.direccion_ubicacion {
+    font-weight: 150;
+    text-transform: uppercase;
+    font-size: 1rem;
+    border-bottom: 1px solid var(--azuloscuro);
+    padding: 10px;
+}
+#ubicacion h2 {
+    margin-top: 10px;
+    font-size: 1rem;
+}
+#opiniones {
+    grid-area: opiniones;
+    display: grid;
+    grid-template-areas:
+        "titulo_opiniones"
+        "box-opciones";
+    background-image: url(../img/vector-comentarios.svg);
+    background-repeat: repeat-x;
+    background-size: 280%;
+    margin-top: 20px;
+}
+.titulo_opiniones {
+    font-size: 1rem;
+    color: var(--blanco);
+    text-align: center;
+    padding-top: 1rem;
+}
+.box-opciones {
+    grid-area: box-opciones;
+    display: grid;
+    grid-template-areas:
+        "opciones-btn" auto "opciones-btn" auto "opciones-btn" auto;
+    padding: 1rem 0.7rem;
+}
+.opciones-btn p {
+    padding-top: 0.5rem;
+    padding-left: 1rem;
+    color: var(--blanco);
+}
+.nombre-opciones {
+    display: flex;
+    justify-content: baseline;
+    flex-basis: 20% 80%;
+    color: var(--blanco);
+    align-items: center;
+    text-align: center;
+    padding: 1rem 3rem 0rem 1.5rem;
+    background-image: url(../img/Vector-opinion.png);
+    background-repeat: no-repeat;
+    background-size: 100% 90%;
+}
+.nombre {
+    padding: 1rem;
+    align-items: flex-end;
+}
+.opciones-btn img {
+    display: flex;
+    border-radius: 100%;
+}
+.opciones-btn {
+    display: flex;
+    flex-direction: column;
+    background: linear-gradient(49.54deg, #337AB7 2.89%, #0B3860 80.34%);
+    height: 170px;
+    margin: 0.2rem;
+    border-radius: 0.2rem;
+}
+.text-opciones {
+    text-align: justify;
+    color: var(--blanco);
+    font-size: 0.5rem;
+}
+.calificacion {
+    color: var(--blanco);
+}
+.calificacion1 {
+    color: var(--Magenta);
+}
+#footer {
+    background-color: var(--negro2);
+    margin-top: 2%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    color: var(--blanco);
+    padding: 1rem;
+}
+.text-footer {
+    padding-top: 10px;
+    font-family: 'Marcellus', serif;
+    font-size: 0.7rem;
+    text-align: justify;
+    padding: 0.7rem;
+}
+.contac-footer {
+    margin-top: 5px;
+    padding: 5px;
+    line-height: 2rem;
+    border-bottom: 1px solid var(--blanco);
+    border-top: 1px solid var(--blanco);
+}
+.politicas-footer {
+    padding: 0.7rem;
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.7rem;
+    border-bottom: 1px solid var(--blanco);
+}
+.sale {
+    padding-top: 0.7rem;
+}
+.redes {
+    padding: 0.7rem;
+}
+@media screen and (min-width:768px) {
+    .logo {
+        display: flex;
+        justify-content: space-between;
+    }
+    .logo img {
+        width: 20%;
+    }
+    .logo-description {
+        display: block;
+        padding: 1rem;
+        max-width: 100%;
+    }
+    .logo-description img {
+        width: 100px;
+    }
+    #description {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        flex-basis: 70% 30%;
+    }
+}
+
+@media screen and (min-width:1024px) {
+    header {
+        display: grid;
+        grid-template-areas:
+            "logo nav" auto;
+        align-items: center;
+    }
+    .logo {
+        grid-area: logo;
+        background-color: var(--azulnegro);
+    }
+    .logo i {
+        display: none;
+    }
+    .logo img {
+        width: 170px;
+        background-color: var(--azulnegro);
+    }
+    nav {
+        display: flex;
+        justify-content: flex-end;
+        background-color: transparent;
+        margin: 0;
+    }
+    nav a {
+        display: flex;
+        justify-content: space-around;
+        text-decoration: none;
+        color: var(--blanco);
+        font-family: 'Marcellus', serif;
+        font-size: 1.7rem;
+    }
+    .menu-item {
+        display: flex;
+        justify-content: center;
+    }
+    a:hover {
+        background-color: transparent;
+        width: auto;
+        color: var(--azuloscuro);
+    }
+    .menu-hr {
+        display: none;
+    }
+    .btn-menu {
+        background-color: var(--azuloscuro);
+        color: var(--blanco);
+        margin-right: 2%;
+        padding: 0.5rem 1rem;
+        font-family: 'Marcellus', serif;
+        font-size: 1rem;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+    #banner {
+        height: 400px;
+    }
+    .text_banner {
+        font-size: 2rem;
+    }
+    #description {
+        padding: 5%;
+    }
+    .text-description {
+        font-size: 1.5rem;
+        text-align: justify;
+    }
+    .logo-description img {
+        width: 180px;
+        margin-left: 3rem;
+    }
+    #feature h2 {
+        font-size: 2rem;
+    }
+    #feature i {
+        font-size: 2rem;
+    }
+    #ubicacion {
+        font-size: 2rem;
+    }
+    #ubicacion h2 {
+        font-size: 2rem;
+    }
+    .titulo_opiniones {
+        font-size: 2rem;
+        margin-top: 1rem;
+    }
+    .box-opciones {
+        grid-area: box-opciones;
+        display: grid;
+        grid-template-areas:
+            "opciones-btn opciones-btn opciones-btn";
+    }
+    .opciones-btn {
+        margin: 1rem;
+    }
+    #opiniones {
+        background-size: 100% 80%;
+        height: 80%;
+    }
+    #footer {
+        display: flex;
+        flex-direction: row;
+        margin-top: 10%;
+    }
+    .text-footer {
+        display: flex;
+        justify-content: flex-start;
+        width: 20%;
+    }
+    .contac-footer {
+        border-top: none;
+        border-bottom: none;
+    }
+    .politicas-footer {
+        border-bottom: none;
+        display: flex;
+        justify-content: flex-end;
+        flex-direction: column;
+        justify-content: space-around;
+    }
+}
+@media screen and (min-width:(1308px)) {}

@@ -1,0 +1,232 @@
+@import url('https://fonts.googleapis.com/css2?family=Marcellus&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+:root{
+  --azulclaro: #48D6ED;
+  --azuloscuro: #337AB7;
+  --azulnegro: #303342;
+  --negro: #333333;
+  --negro2: #000;
+  --gris: #B2B3B3;
+  --fondo: #FFFEFC;
+  --verdeazul: #157A8A;
+  --Magenta: #9C2759;
+  --blanco: #fff;
+  --degradado: linear-gradient(49.54deg, #337AB7 2.89%, #0B3860 80.34%);
+}
+*{
+  margin: 0;
+  padding: 0;
+  border:0;
+  box-sizing: border-box;
+} 
+body{
+  font-family: 'Roboto', sans-serif;
+  font-size: 14px;
+}
+h1,h2,h3,h4,h5{
+  font-family: 'Marcellus', serif;
+}
+header{
+  display: flex;
+  background-color: var(--azulnegro);
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+}
+.menu-item{
+  font-family: 'Roboto', sans-serif;
+  font-size: 1.5rem;
+  font-weight: 80;
+  margin: auto 0.5rem;
+}
+.btn-azul{
+  font-family: 'Roboto', sans-serif;
+  font-size: 1.5rem;
+  font-weight: 80;
+  padding: 0.5rem 1rem;
+  margin: auto 1.5rem;
+  border-radius: 0.2rem;
+  background-color: var(--azuloscuro);
+  color: var(--blanco);
+}
+.btn-azul i{
+  margin: auto 0.5rem auto 0.2rem;
+}
+.logo img{
+  width: 180px;
+  margin: auto 1.5rem;
+}
+nav a{
+  font-family:serif;
+  color: var(--blanco);
+  font-size: 1.5rem;
+  text-decoration:none;
+  padding: 0 1rem;
+}
+#description{
+  display: flex;
+}
+#banner{
+  padding: 0.25rem 0.25rem;
+  background-image: url("../img/slide1.jpg");
+  height: 500px;
+  background-size: cover;
+  display: flex;
+  flex-direction: column-reverse;
+}
+#banner h2{
+  padding: 0.5rem 1rem;
+  font-size: 3rem;
+  color: var(--blanco);
+  background-color: rgba(0, 0, 0, 0.2);
+  font-family: 'Roboto', sans-serif;
+}
+#description{
+  padding: 6rem;
+  display: flex; 
+  align-items: center;
+}
+.text-description{
+  font-size: 1.5rem;
+}
+.logohotelia{
+  display: flex;
+  justify-content: center;
+  padding: 1.5rem;
+}
+.logohotelia img{
+  width: 250px;
+}
+#feature{
+  background-image: url("../img/bg-features.png");
+  background-size: cover;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  background-position: 50% 70%;
+}
+.featurecaja{
+  display: flex;
+  justify-content: space-around;
+  margin-top: 1rem;
+}
+#feature h2{
+  text-align: center;
+  color: var(--blanco);
+  background-color: rgba(0, 0, 0, 0.2);
+  font-size: 2rem;
+  text-shadow: 3px 3px 3px black; 
+  font-weight: 100;
+}
+.feature-box{
+  text-align: center;
+  padding: 1rem 1.5rem;
+  border-radius: 3px;
+  color: var(--blanco);
+  font-size: 3rem;
+  font-weight: 50;
+}
+.feature-box h3{
+  font-size: 1.5rem;
+  font-family: 'Roboto', sans-serif;
+  margin-top: 1.5rem;
+}
+.box-blue{
+  background-color: #00325eae;
+}
+.box-dark{
+  background-color: rgba(0,0,0,0.59);
+}
+#ubication{
+  text-align: center;
+  font-size: 2rem;
+}
+#ubication h1{
+  padding-top: 3rem;
+}
+#ubication h2{
+  padding-top: 1rem;
+  font-size: 1.5rem;
+  font-weight: 70;
+}
+#ubication hr{
+    width: 50%;
+    background-color: var(--azuloscuro);
+    height: 1.5px;
+    margin: 0.5rem 0 0.5rem 21rem;
+}
+#opiniones{
+  background-image: url(../img/vector-comentarios.svg);
+  background-repeat: repeat-x;
+  background-size: 80% 70%;
+  height: 50%;
+}
+.titulo_opiniones{
+  font-size: 2rem;
+  color: var(--blanco);
+  text-align:center;
+  padding-top: 5rem;
+}
+.box-opciones{
+  display: flex; 
+  flex-wrap: wrap;
+  justify-content: space-around;
+  padding: 1rem 0.7rem;  
+}
+.opciones-btn p{
+  padding: 1rem;
+  color: var(--blanco);
+}
+.nombre-opciones{
+  display: flex;
+  justify-content: baseline;
+  flex-basis: 20% 80%;
+  color: var(--blanco);
+  align-items: center;
+  text-align: center;
+  padding: 1rem 3rem 1rem 1.5rem;
+  background-image: url(../img/Vector-opinion.png);
+  background-repeat: no-repeat;    
+  background-size:100% 90% ;
+}
+.nombre{
+  padding: 1rem;
+  align-items: flex-end;
+}
+.opciones-btn img{
+  display: flex;
+  border-radius: 100%;
+}
+.opciones-btn{
+  background: linear-gradient(49.54deg, #337AB7 2.89%, #0B3860 80.34%);
+  margin: 0.5rem;
+  border-radius: 0.2rem;
+  flex-basis: 31%;
+}
+.text-opciones{
+  text-align: justify;
+  color: var(--blanco);
+  font-size: 0.5rem;
+}
+.calificacion{
+  color: var(--blanco);
+}
+.calificacion1{
+  color: var(--Magenta);
+}
+#footer{
+  background-color: var(--negro2);
+  margin-top: 100px;
+  display: flex;
+  justify-content: space-around;
+  color: var(--blanco);
+  padding: 1.5rem;
+}
+.text-footer{
+  padding-top: 10px;
+  font-family: 'Marcellus', serif;
+}
+.contac-footer{
+  line-height:3rem;
+}
+.politicas-footer{
+  line-height: 3rem;
+}
